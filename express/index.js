@@ -44,8 +44,20 @@ app.post("/", (req, res) => {
 //===============================================================================================
 //========Parameters========
 
+//Path Parameters
+
 app.get("/:username/:id", (req, res) => {
     let { username, id} = req.params;
     let htmlStr = `<h1>Hello @${username}</h1>`;
     res.send(htmlStr);
+});
+
+//===========================
+
+app.get("/search", (req, res) => {
+    let { q } = req.query;
+    if(!q){
+        res.send("<h1>Nothing Searched</h1>")
+    }
+    res.send(`<h1>these are the seach res for query: ${q}</h1>`);
 });
