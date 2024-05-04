@@ -11,8 +11,11 @@ const path = require("path");//For express to take views folder to search ejs
 
 const port = 8080;
 
+app.use(express.static(path.join(__dirname, "public")));// Serving public folder for static files
+
 app.set("view engine","ejs");//to render or show ejs as engine
 
+// ==== Also to run the index.js file from the parent folder (apna college webd)
 
 app.set("views", path.join(__dirname, "/views"));//For express to take views folder to search ejs
 
@@ -31,10 +34,18 @@ app.listen(port, () => {
 
 //****Refer ejs.co website to see ejs tags*****//
 
-app.get("/ig/:username", (req, res) => {
+app.get("/ig/:username", (req, res) => {//username then id in path
     let {username} = req.params;
-    console.log(username);
-    res.render("insta.ejs",{username});
+    const instaData = require("./data.json")
+    console.log(instaData);
+    const data = instaData[username];
+    if(data){
+        res.render("insta.ejs", {data});
+    }
+    else{
+        res.render("error.ejs");
+    }
+    
 })
 
 

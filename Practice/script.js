@@ -176,20 +176,20 @@
 //to stop the repetion use clearInterval(id)
 //=================================================
 //"this" in arrow functions 
-const student = {
-    name : "aman",
-    marks: 95, 
-    prop: this,//global scope
-    getName: function () {
-        console.log(this);
-        return this.name;
-    },
-    getInfo: function () {
-        setTimeout( () => {
-            console.log(this);//parent's scope
-        }, 2000);
-    }
-}
+// const student = {
+//     name : "aman",
+//     marks: 95, 
+//     prop: this,//global scope
+//     getName: function () {
+//         console.log(this);
+//         return this.name;
+//     },
+//     getInfo: function () {
+//         setTimeout( () => {
+//             console.log(this);//parent's scope
+//         }, 2000);
+//     }
+// }
 //============================================================
 //for each
 // let arr = [1,2,3,4,5];
