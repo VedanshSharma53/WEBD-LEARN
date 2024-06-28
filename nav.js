@@ -22,6 +22,8 @@
 // HTML pages made different applications like insta page, rolldice logic , etc
 
 // MISCELLANEOUS folder was created to understand oops concepts using javascript..
-// and to understand restful api's , making Quora posts application!
+// and to understand restful api's , making Quora posts application which is in REST_CLASS directory!
 
-// Updated 05.04.2024
+// SQL datasabse theory is noted in the sql folder as sql.js file!
+
+// Updated 21.05.2024
